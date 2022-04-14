@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.conditions {
+  grid-area: conditions;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.condition {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 20px 5px;
+  margin: 5px 5px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
+}
+
+.condition > span {
+  font-size: 0.6em;
+  font-weight: 600;
+  text-transform: uppercase;
+  transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  color: #fff;
+  margin: 0 auto;
+}
+
+.green {
+  background-color:#33a474;
+}
+
+.green:hover{
+  background-color: #277d58;
+}
+
+.purple {
+  background-color: #88619a;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.purple:hover{
+  background-color: #735283;
+}
+
+.questions {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+}
+
+.questions > ul {
+  list-style: none;
+}
+
+.question {
+  border-bottom: 1px solid #dddfe2;
+  max-width: 400px;
+  padding: 35px 0 20px;
+  transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+}
+
+.decision {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 15px;
+}
+
+.options {
+  align-items: center;
+  display: flex;
+  flex: 0 0 100%;
+  justify-content: space-between;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.option {
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+}
+
+.option > span {
+  font-size: 1.1em;
+  margin-top: 3px;
+  color: transparent;
+}
+
+.left {
+  border: 2px solid #33a474;
+  border-width: 3px;
+}
+
+.right {
+  border: 2px solid #88619a;
+  border-width: 3px;
+}
+
+.left:hover {
+  background-color: #33a474;
+}
+
+.leftText,
+.mobileLeft {
+  color: #33a474;
+}
+
+.rightText,
+.mobileRight {
+  color: #88619a;
+}
+
+
+
+.right:hover {
+  background-color: #88619a;
+}
+
+.max {
+  height: 55px;
+  max-width: 55px;
+  width: 55px;
+}
+
+.med {
+  flex: 0 0 35px;
+  height: 35px;
+  max-width: 35px;
+}
+
+.min {
+  flex: 0 0 28px;
+  height: 28px;
+  max-width: 28px;
+}
+
+.caption {
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 33.3%;
+}
+
+.mobile {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.mobileLeft,
+.mobileRight{
+  width: 50%;
+}
+
+.mobileLeft{
+  text-align: start;
+}
+
+.mobileRight{
+  text-align: left;
+}
+
+.leftText,
+.rightText {
+  display: none;
+}
+
+@media screen and (min-width: 769px) {
+  .question {
+    max-width: none;
+  }
+  .decision {
+    margin: 30px 0 20px;
+  }
+
+  .caption {
+    display: block;
+    font-size: 1em;
+    text-transform: none;
+  }
+
+  .options {
+    flex: 0 0 400px;
+    margin: 0 30px;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .decision:not(.mobile) .caption {
+    display: block;
+  }
+
+  .conditions {
+    max-width: 500px;
+  }
+
+  .condition> span{
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .question {
+    padding: 35px 0 20px;
+  }
+
+  .caption {
+    font-size: 1.1em;
+  }
+
+  .options {
+    flex: 0 0 500px;
+  }
+
+  .max {
+    flex: 0 0 55px;
+    height: 55px;
+    max-width: 55px;
+  }
+
+  .med{
+    flex: 0 0 45px;
+    height: 45px;
+    max-width: 45px;
+  }
+
+  .min {
+    flex: 0 0 35px;
+    height: 35px;
+    max-width: 35px;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .questions {
+    padding: 15px;
+  }
+}
+
+
+.inactive {
+  opacity: .3;
+}
+
+.option.active span{
+  color: #fff;
+}
